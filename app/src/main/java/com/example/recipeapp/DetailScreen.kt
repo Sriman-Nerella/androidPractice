@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -47,10 +48,7 @@ fun DetailScreen(modifier: Modifier = Modifier,
             modifier = Modifier
                 .clip(RoundedCornerShape(8.dp))
                 .padding(4.dp)
-                .scrollable(
-                    rememberScrollState(),
-                    orientation = Orientation.Vertical
-                )
+                .verticalScroll(rememberScrollState())
             )
     }
 }
